@@ -85,7 +85,9 @@ class HomeScreen extends StatelessWidget {
             Icon(
               isDarkMode ? Icons.nightlight_round : Icons.wb_sunny,
               size: 100,
-              color: isDarkMode ? Colors.yellow : Colors.orange,
+              color: isDarkMode
+                  ? Colors.yellow
+                  : Colors.orange.withValues(alpha: 0.1),
             ),
             const SizedBox(height: 20),
 
@@ -104,7 +106,7 @@ class HomeScreen extends StatelessWidget {
                 Switch(
                   value: isDarkMode,
                   onChanged: onThemeChanged,
-                  activeColor: Colors.deepPurpleAccent,
+                  activeThumbColor: Colors.deepPurpleAccent,
                 ),
                 const Text('Dark', style: TextStyle(fontSize: 18)),
               ],
